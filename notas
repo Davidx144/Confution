@@ -1,0 +1,67 @@
+en boostrap todo se divide primero por contenedores, luego por filas, y de ultipo por columnas
+    <div class="Conatiner">
+        <div class= "row">
+            <div class="col-md-12"> 
+                Las columnas se dividen en 12 espacios, y se adepantan segun la panatalla
+                panatallas segun su col =
+                col-sm = pequeña
+                col-md = mediana
+                col-lg = larga
+                col-xl = muy grande
+                col-*  = por defecto
+                o bien col-1,2,3...12 segun se quiera.
+                o combinada col-sm-1,2,3...
+                si no se coloca numero, sino por ejemplo 3 col-sm, 
+                entonces los 12 se dividen por 3 y le da 4 a cada div class="col-sm" auntomaticamente
+                EJEMPLO 
+                    <div class="col-12 col-sm-5">
+                    <div class="col-12 col-sm-7">
+                    con este ejemplo tendriamos un cuadro encima del otro cuendo la pantalla es pequeña
+                    y al crecer un ejemeplo seria un poco mas grande que el otro.
+                    tambien hay clases para decir quien se debe ordenar primero
+                    Ejemplo 
+                    <div class="col-sm-7 orden-sm-last">
+                    <div class="col-sm-5 orden-sm-first">
+                    en este caso, al hacer mas grande la pantalla, se pone primero el segundo. 
+
+                    Esto tambien se puede hacer en auto, con.
+                    <div className="row align-items-center"> #alinea segun la altura de la fila
+                    <div className="row justify-content-center"> #alinea segun los espacios disponibles en columnas
+                    #PERO con ese center, el va a dejar la de los lados quietos de ser necesario
+
+                    #APARA DESPLAZAR UNA SERIE DE COLUMNAS 
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-4 offset-sm-1"> #ESTO desplasza una columna de las 12 y pone las otra 4
+                    
+                    #SEPARAR CONTENIDO DEL HEADER o  FOOTER  CON EL BODY
+                    Se usa la clase 
+                    <header class="jumbotrom">
+                    <footer class="jumbotrom">
+
+                    #VARIOS ONJETOS EN EL MISMO ROW
+                        <div class="container">
+                            <div class="row">
+                                 <div class="col-12 col-sm-4 col-md-3">
+                                 <div class="col-12 col-sm col-md"> #Este ire al lado y cogera las columnas que sobren
+
+                    #Las filas ROW tambien tienen clases y estilos
+                    #Primero definimos en el css clases como 
+                    .row-hader{}
+                    .row-content{}
+                    .footer{}
+                    .jumbotron{}
+                    .address{}
+
+                    Y luego podemos poner en la definicion de <row>, algo como 
+                    <row class="row-content">, y asi se aplica el estilo css 
+
+                    Ademas de eso se pueden colocar cosas extras como
+                    <div class="row row-content align-items-center"> #Alinea todos los item 
+                    <div class="row justify-content-center">  #lleva todo al centro de la columna
+
+                    #COMO OCULTAR ALGO SI LA PANATALLA TIENE CIERTO TAMAÑO
+                    <div class="d-lg-none">ESTO SOLO SE VE EN PANATALLAS GRANDES</div>
+                    <div class="d-none d-lg-block">ESTO SOLO SE VE EN PANATALLAS PEQUEÑAS</div>
+
+                    
